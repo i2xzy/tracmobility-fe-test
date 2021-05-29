@@ -58,10 +58,10 @@ const VehicleList = () => {
   );
 
   const columns: GridColDef[] = [
-    { field: 'id', headerName: 'Vehicle ID', width: 125 },
-    { field: 'qrCode', headerName: 'QR Code', width: 115 },
-    { field: 'status', headerName: 'Status', width: 102 },
-    { field: 'lockStatus', headerName: 'Lock Status', width: 132 },
+    { field: 'id', headerName: 'Vehicle ID', width: 125, flex: 1 },
+    { field: 'qrCode', headerName: 'QR Code', width: 115, flex: 1 },
+    { field: 'status', headerName: 'Status', width: 102, flex: 1 },
+    { field: 'lockStatus', headerName: 'Lock Status', width: 132, flex: 1 },
     {
       field: 'batteryLevel',
       headerName: 'Battery Level',
@@ -71,7 +71,8 @@ const VehicleList = () => {
     {
       field: 'category',
       headerName: 'Operation',
-      flex: 1,
+      width: 340,
+      flex: 4,
       renderCell: renderOperation,
     },
   ];
